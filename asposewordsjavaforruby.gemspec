@@ -5,7 +5,7 @@ require 'asposewordsjavaforruby/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'asposewordsjavaforruby'
-  spec.version       = AsposeWordsJavaforRuby::VERSION
+  spec.version       = Asposewordsjavaforruby::VERSION
   spec.authors       = ['Aspose Marketplace']
   spec.email         = ['marketplace@aspose.com']
   spec.summary       = %q{A Ruby gem to work with aspose.words libraries}
@@ -13,10 +13,10 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/asposemarketplace/Aspose_Words_Java_for_Ruby'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split("\x0")
+spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-spec.test_files = spec.files.grep(%r{^(samples)/})
-  spec.require_paths = ['lib', 'lib/asposewordsjavaforruby']
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.0'
